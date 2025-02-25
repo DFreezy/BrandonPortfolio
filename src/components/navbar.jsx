@@ -7,12 +7,7 @@ export default function Navbar() {
   return (
     <div className={`flex flex-wrap justify-center gap-4 py-4 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"} transition-colors duration-300`}>
       {/* Light/Dark Mode Toggle */}
-      <button 
-        onClick={() => setDarkMode(!darkMode)} 
-        className="text-2xl hover:scale-110 transition-transform"
-      >
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+     
 
       {/* Menu Button */}
       <button className="p-2 text-2xl rounded-full bg-gray-800 text-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200">
