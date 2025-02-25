@@ -11,3 +11,5 @@ Currently, two official plugins are available:
 https://www.figma.com/design/6jV0Th4o3DzXCxcZwQ5Psy/Untitled?node-id=0-1&p=f&t=6DuF8KNTLEg8ukJZ-0
 
 https://brandonseptember.netlify.app/#
+
+client wants dark theme
