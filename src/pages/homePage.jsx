@@ -16,7 +16,7 @@ export default function Homepage() {
           />
           <div className="lg:ml-10 mt-6 lg:mt-0">
             <h1 className="text-4xl font-bold text-gray-900">Hi, I'm Brandon</h1>
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-4 text-gray-600 leading-relaxed font-bold">
               I’m Brandon September, a digital mentor at Capaciti. With over ten years of expertise in technology
               education, I develop and deliver high-quality online learning programs, empowering students and teachers
               across the continent.
