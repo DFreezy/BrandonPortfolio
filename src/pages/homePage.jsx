@@ -1,30 +1,50 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
 export default function Homepage() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className={`min-h-screen px-10 transition-colors duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
-      
-      {/* Dark Mode Toggle */}
-      <button 
-        onClick={() => setDarkMode(!darkMode)} 
-        className="text-2xl hover:scale-110 transition-transform mt-4"
-      >
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+      {/* Dark Mode Toggle and Menu Button */}
+      <div className='flex justify-between py-4 items-center'>
+        <button 
+          onClick={() => setDarkMode(!darkMode)} 
+          className="text-2xl hover:scale-110 transition-transform"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
+        <button 
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="p-2 text-2xl rounded-full bg-gray-800 text-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200"
+        >
+          <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
+        </button>
+      </div>
+
+      {/* Navigation Menu */}
+      {menuOpen && (
+        <nav className="absolute top-16 right-10 bg-white text-black shadow-lg rounded-lg p-4 w-40">
+          <ul className="space-y-2">
+            <li><a href="#about" className="block hover:text-gray-700">About</a></li>
+            <li><a href="#experience" className="block hover:text-gray-700">Experience</a></li>
+            <li><a href="#skills" className="block hover:text-gray-700">Skills</a></li>
+          </ul>
+        </nav>
+      )}
 
       {/* Hero Section */}
       <div
         className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-10 py-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${darkMode ? "/th.jpeg" : "/R.jfif"})`, minHeight: 'calc(100vh - 10rem)' }}
       >
-        <div className="">
+        <div>
           <img
             src="image.jfif"
             alt="Profile"
-            className="w-32 lg:w-40 rounded-full shadow-lg mx-auto lg:mx-10 border-4 transition-colors duration-300"
+            className="rounded-full w-50 h-54"
             style={{ borderColor: darkMode ? "white" : "black" }}
           />
           <div className={`lg:ml-10 mt-6 lg:mt-0 ${darkMode ? "text-white" : "text-black"}`}>
@@ -41,19 +61,44 @@ export default function Homepage() {
           </div>
         </div>
       </div>
+      <div id="about" className={`lg:ml-10 mt-6 lg:mt-24 py-14 px-14 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+  <h1 className="text-center text-3xl font-bold">About</h1>
+  <h2 className="mt-6 text-lg leading-relaxed">
+    I have gained experience with over a decade of expertise in technology education. 
+    I have developed and delivered innovative online learning programs that enhance digital literacy and technical skills. 
+    My experience spans roles as a digital mentor, educator, and web developer, where I have consistently demonstrated 
+    my ability to lead, teach, and create impactful educational content. Through all my time mentoring, 
+    I have developed an understanding and empathetic approach, yet honest, to teaching my pupils to take over the tech industry. 
+    I have acquired experience as a digital mentor, subject matter expert, technology specialist, tech teacher, 
+    and educational expert for the following companies:
+  </h2>
+
+  <div className="flex flex-wrap justify-center gap-10 mt-10">
+    {[
+      { src: "Valenture-Institute.jpg", alt: "Valenture Institute" },
+      { src: "uvu-africa-logo-c.jpg", alt: "UVU Africa" },
+      { src: "westerncape-department-education-wced_orig.png", alt: "Western Cape Department of Education" }
+    ].map((image, index) => (
+      <div key={index} className="relative group">
+        <img 
+          src={image.src} 
+          alt={image.alt} 
+          className="w-52 h-50 border-4 border-gray-400 rounded-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl"
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
       {/* Experience Section */}
-      <div className="px-10 py-10 text-center">
+      <div id="experience" className="px-10 py-10 text-center">
         <h1 className="text-3xl font-bold">My Experience</h1>
         <p className="mt-4 max-w-3xl mx-auto">
           With over a decade of expertise in technology education, I have developed and delivered innovative
-          online learning programs that enhance digital literacy and technical skills. My experience spans
-          roles as a digital mentor, educator, and web developer.
+          online learning programs that enhance digital literacy and technical skills.
         </p>
-      </div>
-
-      {/* Experience Cards */}
-      <div className="flex flex-wrap justify-center gap-6 px-10">
+         {/* Experience Cards */}
+      <div className="flex flex-wrap justify-center gap-6 px-10 mb-44 mt-20">
         {Array(3).fill().map((_, index) => (
           <div key={index} className={`shadow-lg rounded-lg p-6 w-80 text-center transition duration-300 ${darkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black hover:bg-gray-300"}`}>
             <h1 className="text-lg font-bold">Digital Mentor in Education</h1>
@@ -76,6 +121,15 @@ export default function Homepage() {
           I am proficient in various applications, including Microsoft Office and Google Apps, and I stay updated
           with industry trends. With excellent communication and leadership skills, I strive to make a meaningful
           impact in the digital education space.
+        </p>
+      </div>
+      </div>
+
+      {/* Skills Section */}
+      <div id="skills" className="px-10 py-10 text-center">
+        <h1 className="text-3xl font-bold">Skills</h1>
+        <p className="mt-4 max-w-3xl mx-auto">
+          Proficient in multiple applications including Microsoft Office, Google Apps, and modern web development tools.
         </p>
       </div>
     </div>
