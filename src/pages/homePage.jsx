@@ -142,12 +142,8 @@ export default function Homepage() {
 
 
       {/* Experience Section */}
-      <div id="experience" className="px-10 py-10 text-center">
-        <h1 className="text-3xl font-bold">My Experience</h1>
-        <p className="mt-4 max-w-3xl mx-auto">
-          With over a decade of expertise in technology education, I have developed and delivered innovative
-          online learning programs that enhance digital literacy and technical skills.
-        </p>
+      <div id="experience" className="px-10 py-10 text-center bg-black">
+        <h1 className="text-3xl font-bold bg-red-600">My Experience</h1>
          {/* Experience Cards */}
       <div className="flex flex-wrap justify-center gap-6 px-10 mb-44 mt-20">
           <div className={`shadow-lg rounded-lg p-6 w-80 text-center transition duration-300 ${darkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black hover:bg-gray-300"}`}>
@@ -157,22 +153,29 @@ export default function Homepage() {
             <p className="text-sm">2023 - Present</p>
           </div>
         
+          <div className={`shadow-lg rounded-lg p-6 w-80 text-center transition duration-300 ${darkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black hover:bg-gray-300"}`}>
+            <h1 className="text-lg font-bold">Digital Mentor in Education</h1>
+            <p className="text-sm">UVU Africa: Full-time</p>
+            <p className="text-sm">Technology integration/coaching</p>
+            <p className="text-sm">2023 - Present</p>
+          </div>
+
+          <div className={`shadow-lg rounded-lg p-6 w-80 text-center transition duration-300 ${darkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black hover:bg-gray-300"}`}>
+            <h1 className="text-lg font-bold">Digital Mentor in Education</h1>
+            <p className="text-sm">UVU Africa: Full-time</p>
+            <p className="text-sm">Technology integration/coaching</p>
+            <p className="text-sm">2023 - Present</p>
+          </div>
+
+          <div className={`shadow-lg rounded-lg p-6 w-80 text-center transition duration-300 ${darkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black hover:bg-gray-300"}`}>
+            <h1 className="text-lg font-bold">Digital Mentor in Education</h1>
+            <p className="text-sm">UVU Africa: Full-time</p>
+            <p className="text-sm">Technology integration/coaching</p>
+            <p className="text-sm">2023 - Present</p>
+          </div>
       </div>
 
       {/* Future Vision Section */}
-      <div className={`px-10 py-10 text-center transition-colors duration-300 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"}`}>
-        <h3 className="text-lg">I Make the Future</h3>
-        <h1 className="text-3xl font-bold">I Develop & Create a Digital Future</h1>
-        <p className="mt-4 max-w-3xl mx-auto">
-          I have multiple certifications in time management, high-performance habits, and professional ethics
-          from reputable platforms such as LinkedIn and SACE.
-        </p>
-        <p className="mt-4 max-w-3xl mx-auto" id="resume">
-          I am proficient in various applications, including Microsoft Office and Google Apps, and I stay updated
-          with industry trends. With excellent communication and leadership skills, I strive to make a meaningful
-          impact in the digital education space.
-        </p>
-      </div>
       </div>
 
       {/* Skills Section */}
