@@ -22,6 +22,7 @@ export default function Footer({ darkMode }) {
     },
   ];
 
+  
   return (
     <footer 
       className={`flex flex-col items-center justify-center space-y-4 py-8 border-t transition-colors duration-300 

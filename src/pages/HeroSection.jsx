@@ -16,7 +16,7 @@ export default function HeroSection() {
         <img
           src='image.jfif'
           alt='Brandon September Profile'
-          className='rounded-full w-52 h-52 border-4 border-gray-400 shadow-lg'
+          className='rounded-full w-52 h-60 border-4 border-gray-400 shadow-lg'
         />
 
         {/* Text Content */}
