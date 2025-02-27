@@ -1,55 +1,27 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
 export default function Navbar() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className={`flex flex-wrap justify-center gap-4 py-4 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"} transition-colors duration-300`}>
-      {/* Light/Dark Mode Toggle */}
-      <button 
-        onClick={() => setDarkMode(!darkMode)} 
-        className="text-2xl hover:scale-110 transition-transform"
-      >
+    <div className='flex justify-between py-4 items-center'>
+      <button onClick={() => setDarkMode(!darkMode)} className='text-2xl hover:scale-110 transition-transform'>
         {darkMode ? "☀️" : "🌙"}
       </button>
-
-      {/* Menu Button */}
-      <button className="p-2 text-2xl rounded-full bg-gray-800 text-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200">
-        <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
+      <button onClick={() => setMenuOpen(!menuOpen)} className='p-2 text-2xl rounded-full bg-gray-800 text-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200'>
+        <img src='/menu-hamburger-svgrepo-com.svg' alt='Menu' className='w-6 h-6' />
       </button>
-
-      {/* Navigation Buttons */}
-      <Link to="/resume">
-        <button className={`px-6 py-2 rounded-lg shadow-md transition ${darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-300 hover:bg-gray-400"}`}>
-          Resume
-        </button>
-      </Link>
-
-      <Link to="/experience">
-        <button className={`px-6 py-2 rounded-lg shadow-md transition ${darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-300 hover:bg-gray-400"}`}>
-          Experience
-        </button>
-      </Link>
-
-      <Link to="/certifications">
-        <button className={`px-6 py-2 rounded-lg shadow-md transition ${darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-300 hover:bg-gray-400"}`}>
-          Certifications
-        </button>
-      </Link>
-
-      <Link to="/education">
-        <button className={`px-6 py-2 rounded-lg shadow-md transition ${darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-300 hover:bg-gray-400"}`}>
-          Education
-        </button>
-      </Link>
-
-      <Link to="/contact">
-        <button className={`px-6 py-2 rounded-lg shadow-md transition ${darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-300 hover:bg-gray-400"}`}>
-          Contact
-        </button>
-      </Link>
+      {menuOpen && (
+        <nav className='absolute top-16 right-10 bg-white text-black shadow-lg rounded-lg p-4 w-40'>
+          <ul className='space-y-2'>
+            <li><a href='#about' className='block hover:text-gray-700'>About</a></li>
+            <li><a href='#experience' className='block hover:text-gray-700'>Experience</a></li>
+            <li><a href='#skills' className='block hover:text-gray-700'>Skills</a></li>
+          </ul>
+        </nav>
+      )}
     </div>
   );
 }
