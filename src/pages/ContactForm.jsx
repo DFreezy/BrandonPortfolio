@@ -16,7 +16,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={`max-w-lg mx-auto p-6 rounded-lg shadow-md mt-10 ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+    <div className={`max-w-lg mx-auto p-6 rounded-lg shadow-md mt-10 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-500 text-black'}`}>
       <h2 className="text-2xl font-bold text-center mb-4">Contact Me</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -45,7 +45,7 @@ export default function ContactForm() {
           className={`w-full p-3 border rounded-lg h-32 ${darkMode ? 'border-white bg-gray-700 text-white' : 'border-black bg-white text-black'}`}
           required
         />
-        <button type="submit" className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button type="submit" className="w-full p-3 bg-red-500 text-white rounded-lg hover:bg-red-600">
           Send Message
         </button>
       </form>

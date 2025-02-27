@@ -35,7 +35,7 @@ export default function Homepage() {
 
         <button 
           onClick={() => setMenuOpen(!menuOpen)}
-          className="p-2 text-2xl rounded-full bg-gray-800 text-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200"
+          className={`p-2 text-2xl rounded-full bg-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200 ${darkMode ? "bg-white" : "bg-black"}`}
         >
           <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
         </button>
@@ -43,9 +43,9 @@ export default function Homepage() {
 
       {/* Navigation Menu */}
       {menuOpen && (
-        <nav className="absolute top-16 right-10 bg-white text-black shadow-lg rounded-lg p-4 w-40">
+        <nav className="absolute top-16 right-10 bg-gray-500 text-black shadow-lg rounded-lg p-4 w-40">
           <ul className="space-y-2">
-            <li><a href="#about" className="block hover:text-gray-700">About</a></li>
+            <li><a href="#About" className="block hover:text-gray-700">About</a></li>
             <li><a href="#Experience" className="block hover:text-gray-700">Experience</a></li>
             <li><a href="#Skills" className="block hover:text-gray-700">Skills</a></li>
           </ul>
@@ -57,7 +57,7 @@ export default function Homepage() {
 
 
     {/*About section*/}
-    <div className={`lg:ml-10 mt-6 lg:mt-24 py-14 px-14 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div className={`lg:ml-10 mt-6 lg:mt-24 py-14 px-14 ${darkMode ? "bg-black text-white" : "bg-gray-300 text-black"}`}>
  <About id="About"/>
     </div>
  <CertificatesSection/>

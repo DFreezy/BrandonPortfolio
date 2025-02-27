@@ -5,7 +5,7 @@ export default function Experience({ id, darkMode }) {
   return (
     <div 
       id={id} 
-      className={`px-10 py-10 text-center ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}
+      className={`px-10 py-10 text-center ${darkMode ? 'bg-black text-white' : 'bg-gray-300 text-black'}`}
     >
       <h1 className="text-3xl font-bold bg-red-600">My Experience</h1>
       

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Footer() {
+export default function Footer({darkMode}) {
   const socialLinks = [
     {
       href: 'https://linkedin.com/in/yourprofile',
@@ -15,7 +15,7 @@ export default function Footer() {
       label: 'Visit GitHub Profile',
     },
     {
-      href: 'mailto:duwaynefrieslaar23@gmail.com',
+      href: 'mailto:gry@gmail.com',
       src: '/email.svg',
       alt: 'Email',
       label: 'Send an Email',
@@ -23,7 +23,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex justify-center space-x-6 mt-6 py-4 border-t">
+    <div className={`flex justify-center space-x-6 mt-6 py-4 border-t ${darkMode ? "bg-black text-white" : "bg-gray-300 text-black"}`}>
       {socialLinks.map((link, index) => (
         <a
           key={index}
