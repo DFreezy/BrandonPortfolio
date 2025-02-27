@@ -18,22 +18,28 @@ export default function Experience({ id, darkMode }) {
           duration: "2023 - Present",
         },
         {
-          title: "Software Developer Intern",
-          company: "XYZ Tech: Internship",
-          description: "Frontend & Backend development",
-          duration: "2022 - 2023",
+          title: "Subject Matter Expert",
+          company: "Westernn Cape Education Department",
+          description: "I guide other professionals on subject to ensure the content is accurate",
+          duration: "2014 - Present",
         },
         {
-          title: "Freelance Developer",
-          company: "Self-employed",
-          description: "Built web applications & managed clients",
-          duration: "2021 - Present",
+          title: "Technology specialist",
+          company: "Valenture Institute",
+          description: "Educational Leadership, Technology Integration",
+          duration: "Mar 2022 - Mar 2023",
         },
         {
-          title: "Teaching Assistant",
-          company: "University of Example",
-          description: "Assisted students in learning programming",
-          duration: "2020 - 2021",
+        title: "Educational Specialist",
+        company: "Norman Henshilwood High School",
+        description: "Educational Leadership, Technology Integration",
+        duration: "Jan 2014 - Jul 2021",
+        },
+        {
+          title: "Technology Education teacher",
+          company: "Wynberg Girl's High School",
+          description: "Educational Leadership, Technology Integration",
+          duration: "Apr 2021 - Mar 2022",
         }].map((experience, index) => (
           <div key={index} className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold">{experience.title}</h2>

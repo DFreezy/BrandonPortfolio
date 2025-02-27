@@ -18,9 +18,9 @@ export default function About({ id }) {
 
       <div className="flex flex-wrap justify-center gap-10 mt-10">
         {[
-          { src: "Valenture-Institute.jpg", alt: "Valenture Institute" },
-          { src: "uvu-africa-logo-c.jpg", alt: "UVU Africa" },
-          { src: "westerncape-department-education-wced_orig.png", alt: "Western Cape Department of Education" }
+          { src: "Valenture-Institute.jpg", alt: "Valenture Institute", title: "Technology Specialist"},
+          { src: "uvu-africa-logo-c.jpg", alt: "UVU Africa", title: "Digital Mentor" },
+          { src: "westerncape-department-education-wced_orig.png", alt: "Western Cape Department of Education", title: "Subject Matter expert" }
         ].map((image, index) => (
           <div key={index} className="relative group">
             <img
@@ -28,6 +28,7 @@ export default function About({ id }) {
               alt={image.alt}
               className="w-52 h-50 border-4 border-gray-400 rounded-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl"
             />
+            <h1>{image.title}</h1>
           </div>
         ))}
       </div>
