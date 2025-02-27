@@ -1,12 +1,9 @@
-// CertificatesSection.js
 import React, { useState } from 'react';
 
 export default function CertificatesSection() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Sample certificate data (replace with actual data)
-const certificates = [
+  const certificates = [
     { src: "AWS.png", alt: "AWS Certificate" },
     { src: "Data analytics.png", alt: "Data Analytics Certificate" },
     { src: "Data science.png", alt: "Data Science Certificate" },
@@ -14,10 +11,9 @@ const certificates = [
     { src: "SQL essentials.png", alt: "SQL Essentials Certificate" },
     { src: "SQL top 5.png", alt: "SQL Top 5 Certificate" }
   ];
-  
 
   return (
-    <div className="py-10 px-6">
+    <section className="py-10 px-6">
       <h1 className="text-center text-3xl font-extrabold tracking-wide mb-6">
         Certificates
       </h1>
@@ -37,12 +33,13 @@ const certificates = [
       {/* Modal Popup */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4 z-50"
+          className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4 z-50 transition-opacity duration-300 ease-in-out"
           onClick={() => setSelectedImage(null)}
+          aria-hidden="true"
         >
-          <div className="relative">
+          <div className="relative max-w-4xl">
             <button
-              className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 hover:bg-red-700 transition duration-200"
+              className="absolute -top-4 -right-4 bg-red-600 text-white rounded-full p-3 hover:bg-red-700 transition duration-200"
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedImage(null);
@@ -58,6 +55,6 @@ const certificates = [
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

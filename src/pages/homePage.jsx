@@ -23,7 +23,9 @@ export default function Homepage() {
   ];
 
   return (
-    <div className={`min-h-screen px-10 transition-colors duration-300 font-sans ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
+    <div className={`min-h-screen px-10 transition-colors duration-300 font-sans 
+      ${darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-800"}`}>
+    
       {/* Dark Mode Toggle and Menu Button */}
       <div className='flex justify-between py-4 items-center'>
         <button 
@@ -32,39 +34,42 @@ export default function Homepage() {
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
-
+    
         <button 
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`p-2 text-2xl rounded-full bg-white hover:bg-gray-600 hover:scale-110 transition-transform duration-200 ${darkMode ? "bg-white" : "bg-black"}`}
+          className={`p-2 text-2xl rounded-full bg-white shadow-md 
+            hover:bg-gray-200 hover:scale-110 transition-transform duration-200 
+            ${darkMode ? "bg-white text-black" : "bg-gray-800 text-white"}`}
         >
           <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
         </button>
       </div>
-
+    
       {/* Navigation Menu */}
       {menuOpen && (
-        <nav className="absolute top-16 right-10 bg-gray-500 text-black shadow-lg rounded-lg p-4 w-40">
+        <nav className="absolute top-16 right-10 bg-white text-gray-800 shadow-md rounded-lg p-4 w-40">
           <ul className="space-y-2">
-            <li><a href="#About" className="block hover:text-gray-700">About</a></li>
-            <li><a href="#Experience" className="block hover:text-gray-700">Experience</a></li>
-            <li><a href="#Skills" className="block hover:text-gray-700">Skills</a></li>
+            <li><a href="#About" className="block hover:text-gray-600">About</a></li>
+            <li><a href="#Experience" className="block hover:text-gray-600">Experience</a></li>
+            <li><a href="#Skills" className="block hover:text-gray-600">Skills</a></li>
           </ul>
         </nav>
       )}
-
+    
       {/* Hero Section */}
       <HeroSection />
-
-
-    {/*About section*/}
-    <div className={`lg:ml-10 mt-6 lg:mt-24 py-14 px-14 ${darkMode ? "bg-black text-white" : "bg-gray-300 text-black"}`}>
- <About id="About"/>
-    </div>
- <CertificatesSection/>
- <Experience id="Experience" darkMode={darkMode}/>
- <Skills id="Skills"/>
- <ContactForm id="Contact"/>
- <Footer id="Links"/>
+    
+      {/* About Section */}
+      <div className={`lg:ml-10 mt-6 lg:mt-24 py-14 px-14 
+        ${darkMode ? "bg-black text-white" : "bg-white text-gray-900 shadow-md rounded-lg"}`}>
+        <About id="About"/>
+      </div>
+    
+      <CertificatesSection/>
+      <Experience id="Experience" darkMode={darkMode}/>
+      <Skills id="Skills"/>
+      <ContactForm id="Contact"/>
+      <Footer id="Links"/>
     </div>
   );
 }
