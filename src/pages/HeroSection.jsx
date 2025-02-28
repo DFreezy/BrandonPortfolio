@@ -9,7 +9,7 @@ export default function HeroSection() {
       className={`flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-10 py-10 bg-cover bg-center transition-all duration-500 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}
-      style={{ backgroundImage: `url(${darkMode ? "/th.jpeg" : "/R.jfif"})`, minHeight: 'calc(100vh - 10rem)' }}
+      style={{ backgroundImage: `url(${darkMode ? "/glasses-lie-laptop-reflecting-light-from-screen-dark.jpg" : "/rm222batch5-kul-02.jpg"})`, minHeight: 'calc(100vh - 10rem)' }}
     >
       <div className="flex flex-col lg:flex-row items-center gap-10">
         {/* Profile Image */}

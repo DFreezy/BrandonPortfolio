@@ -30,7 +30,7 @@ export default function Homepage() {
       <div className='flex justify-between py-4 items-center'>
         <button 
           onClick={() => setDarkMode(!darkMode)} 
-          className="text-2xl hover:scale-110 transition-transform"
+          className="text-2xl hover:scale-110 transition-transform "
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
