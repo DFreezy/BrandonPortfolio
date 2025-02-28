@@ -14,9 +14,9 @@ export default function HeroSection() {
       <div className="flex flex-col lg:flex-row items-center gap-10">
         {/* Profile Image */}
         <img
-          src='image.jfif'
+          src='BrandonLinkedIn.jpeg'
           alt='Brandon September Profile'
-          className='rounded-full w-52 h-60 border-4 border-gray-400 shadow-lg'
+          className='rounded-full w-52 h-52 border-4 border-gray-400 shadow-lg'
         />
 
         {/* Text Content */}
@@ -31,10 +31,16 @@ export default function HeroSection() {
 
           {/* Download CV Button */}
           <button
-            className='mt-6 px-6 py-3 rounded-lg shadow-md transition duration-300 bg-red-600 text-white hover:bg-red-700 transform hover:scale-105'
-          >
-            Download CV
-          </button>
+  className="mt-6 px-6 py-3 rounded-lg shadow-md transition duration-300 bg-red-600 text-white hover:bg-red-700 transform hover:scale-105"
+>
+  <a 
+    href="/2024 Brandon September_CV (1).pdf" 
+    download="2024 Brandon September_CV (1).pdf"
+    className="block w-full h-full"
+  >
+    Download CV
+  </a>
+</button>
         </div>
       </div>
     </section>
