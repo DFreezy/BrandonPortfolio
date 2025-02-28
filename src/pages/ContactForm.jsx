@@ -16,8 +16,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={`max-w-lg mx-auto p-8 rounded-xl shadow-lg transition-all duration-500 mt-10 
-      ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-black'}`}>
+    <div className={`max-w-lg mx-auto p-8 rounded-xl shadow-lg transition-all duration-500 mt-20 mb-20
+      ${darkMode ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}>
       
       <h2 className="text-3xl font-extrabold text-center mb-6">Contact Me</h2>
       

@@ -24,7 +24,7 @@ export default function Homepage() {
 
   return (
     <div className={`min-h-screen px-10 transition-colors duration-300 font-sans 
-      ${darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-800"}`}>
+      ${darkMode ? "bg-gray-900 text-white" : "bg-blue-200 text-gray-800"}`}>
     
       {/* Dark Mode Toggle and Menu Button */}
       <div className='flex justify-between py-4 items-center'>
@@ -36,13 +36,14 @@ export default function Homepage() {
         </button>
     
         <button 
-          onClick={() => setMenuOpen(!menuOpen)}
-          className={`p-2 text-2xl rounded-full bg-white shadow-md 
-            hover:bg-gray-200 hover:scale-110 transition-transform duration-200 
-            ${darkMode ? "bg-white text-black" : "bg-gray-800 text-white"}`}
-        >
-          <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
-        </button>
+  onClick={() => setMenuOpen(!menuOpen)}
+  className={`fixed top-4 right-4 p-2 text-2xl rounded-full shadow-md 
+    hover:scale-110 transition-transform duration-200 
+    ${darkMode ? "bg-blue-300 text-black hover:bg-blue-400" : "bg-gray-800 text-white hover:bg-gray-700"}`}
+>
+  <img src="/menu-hamburger-svgrepo-com.svg" alt="Menu" className="w-6 h-6" />
+</button>
+
       </div>
     
       {/* Navigation Menu */}
