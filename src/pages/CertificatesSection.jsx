@@ -9,7 +9,8 @@ export default function CertificatesSection() {
     { src: "Data science.png", alt: "Data Science Certificate" },
     { src: "Screenshot 2025-02-26 114521.png", alt: "Professional Certificate" },
     { src: "SQL essentials.png", alt: "SQL Essentials Certificate" },
-    { src: "SQL top 5.png", alt: "SQL Top 5 Certificate" }
+    { src: "SQL top 5.png", alt: "SQL Top 5 Certificate" },
+    {src: "automation pro.png", alt: "Automation pro certificate"}
   ];
 
   return (
