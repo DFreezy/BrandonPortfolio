@@ -37,7 +37,7 @@ export default function About({ id }) {
             <img
               src={image.src}
               alt={image.alt}
-              className={`w-52 h-50 border-4 rounded-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl 
+              className={`w-62 h-50 border-4 rounded-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl 
                 ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}
             />
             <h1 className={`mt-2 text-lg font-semibold transition-all duration-300 
