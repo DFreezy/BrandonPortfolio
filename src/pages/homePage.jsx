@@ -46,16 +46,16 @@ export default function Homepage() {
 
       </div>
     
-      {/* Navigation Menu */}
-      {menuOpen && (
-        <nav className="absolute top-16 right-10 bg-white text-gray-800 shadow-md rounded-lg p-4 w-40">
-          <ul className="space-y-2">
-            <li><a href="#About" className="block hover:text-gray-600">About</a></li>
-            <li><a href="#Experience" className="block hover:text-gray-600">Experience</a></li>
-            <li><a href="#Skills" className="block hover:text-gray-600">Skills</a></li>
-          </ul>
-        </nav>
-      )}
+   {/* Navigation Menu */}
+{menuOpen && (
+  <nav className={`fixed top-16 right-10 bg-white text-gray-800 shadow-md rounded-lg p-4 w-40 z-50`}>
+    <ul className="space-y-2">
+      <li><a href="#About" className="block hover:text-gray-600">About</a></li>
+      <li><a href="#Experience" className="block hover:text-gray-600">Experience</a></li>
+      <li><a href="#Skills" className="block hover:text-gray-600">Skills</a></li>
+    </ul>
+  </nav>
+)}
     
       {/* Hero Section */}
       <HeroSection />
